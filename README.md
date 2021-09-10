@@ -1,16 +1,17 @@
 # Retail Store API
 
 Retail Store Ecommerce API
+- [Swagger Documentation](https://app.swaggerhub.com/apis-docs/a4443/retail_store_api/2.0#/)
 
 ## Overview
 
-Retail Store API, a simple minimalistic ecommerce REST API written in Golang and built with Echo and Gorm, MySQL, showcasing three major functionalities:
+Retail Store API, a simple minimalistic ecommerce REST API written in Golang and built with Echo, Gorm, and MySQL, showcasing five major functionalities:
 
 1. Authentication (Register and Login User)
 2. Products listing, and products listing by category
 3. Shopping cart feature (add and delete products)
 4. Order placements and payment transaction
-5. Access restrictions (Admin only routes)
+5. Access restrictions (User and, Admin only routes)
 
 Database Schema Design
 ![Database Schema Design](/docs/erd.png)
@@ -22,7 +23,7 @@ Database Schema Design
 To get started, ensure that you have the following installed on your local machine:
 
 - [Golang](https://golang.org/dl/)
-- [PostgreSQL](https://www.mysql.com/downloads/)
+- [MySQL](https://www.mysql.com/downloads/)
 
 ### 1.2. Run locally
 
@@ -34,7 +35,6 @@ To get started, ensure that you have the following installed on your local machi
 
 - Make a duplicate of `.env.example` and rename to `.env`, then configure your credentials.
 - Install dependencies by running `go mod tidy` on your terminal.
-- Two npm scripts are availiable to spin up the app server:
 - Run command: `go run main.go` to start the server on `localhost:3000`
   -. run command `go test ./controller/ -cover` to run unit testing
 
@@ -52,8 +52,6 @@ There are 4 basic HTTP requests that you can use in this API:
 Each response will include a code(repsonse code),message,status and data object that can be single object or array depending on the query.
 
 ## HTTP Response Codes
-
-Each response will be returned with one of the following HTTP status codes:
 
 Each response will be returned with one of the following HTTP status codes:
 
